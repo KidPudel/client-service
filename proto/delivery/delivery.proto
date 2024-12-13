@@ -1,0 +1,13 @@
+option go_package="github.com/KidPudel/client-service/proto/delivery";
+
+package delivery;
+
+service Delivery {
+	rpc FindEachOther(stream Position) returns (stream Position) {}
+}
+
+message Position {
+	required int32 lat = 1;
+	required int32 long = 2;
+}
+

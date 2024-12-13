@@ -1,0 +1,16 @@
+option go_package="github.com/KidPudel/client-service/proto/client";
+
+package client;
+
+service Client {
+	rpc CheckOrder(Empty) returns (Status) {}
+}
+
+message Empty {
+
+}
+
+message Status {
+	required bool success = 1;
+}
+
